@@ -4,7 +4,7 @@ def call(String githubproject) {
     stages {
       stage('Clone') {
         steps {
-          git url: "https://github.com/$g{ithubproject}"
+          git url: "https://github.com/${githubproject}"
         }
       }
       stage ('Compile') {
