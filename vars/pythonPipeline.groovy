@@ -8,7 +8,7 @@ def call(body) {
     stages {
       stage('Clone') {
         steps {
-          git url: "https://github.com/${githubproject}"
+          git url: "https://github.com/${config.githubproject}"
         }
       }
       stage ('Compile') {
