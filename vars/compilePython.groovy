@@ -1,3 +1,6 @@
+import static org.organization.PythonCompiler.*
+
 def call(String directory = '.') {
-    sh """find ${directory} -name '*.py' -print0| xargs -0 -t -L 1 python2 -m py_compile"""
+    echo ("Compiling ${directory}")
+    compileDirectory(this, directory)
 }
